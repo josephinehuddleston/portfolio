@@ -10,13 +10,10 @@
 
   <style>
     :root{
-      /* Base */
       --bg:#ffffff;
       --text:#0f172a;
       --muted:#475569;
       --border:#e5e7eb;
-
-      /* Accent palette (soft, controlled use) */
       --sage-dark:#758467;
       --sage:#819171;
       --sage-soft:#9CAF88;
@@ -33,19 +30,28 @@
       line-height:1.65;
     }
 
-    a{color:var(--sage-dark);text-decoration:none}
-    a:hover{text-decoration:underline}
+    .container{max-width:1040px;margin:56px auto;padding:24px;position:relative}
 
-    .container{max-width:1040px;margin:56px auto;padding:24px}
+    /* Headshot top-right */
+    .headshot{
+      position:absolute;
+      top:0;
+      right:0;
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid var(--sage-light);
+      transform:translate(-20px, 20px);
+    }
 
-    /* Header */
     header{
       display:flex;
       justify-content:space-between;
       align-items:center;
       padding-bottom:24px;
       border-bottom:1px solid var(--border);
-      margin-bottom:48px
+      margin-bottom:48px;
     }
     .brand{display:flex;gap:16px;align-items:center}
     .logo{
@@ -56,72 +62,48 @@
     }
     nav a{margin-left:24px;font-size:14px;color:var(--muted)}
 
-    /* Typography */
     h1{font-size:34px;line-height:1.25;margin:0 0 16px 0}
     h2{font-size:24px;margin:0 0 20px 0}
     h3{font-size:16px;margin:0 0 6px 0}
     p{margin:0 0 16px 0;color:var(--muted)}
 
-    /* Hero */
-    .hero{
-      display:grid;
-      grid-template-columns:1.6fr 1fr;
-      gap:56px;
-      margin-bottom:72px
-    }
-    .hero-accent{
-      padding-left:20px;
-      border-left:3px solid var(--sage)
-    }
+    .hero{display:grid;grid-template-columns:1.6fr 1fr;gap:56px;margin-bottom:72px}
+    .hero-accent{padding-left:20px;border-left:3px solid var(--sage)}
 
-    /* Cards */
-    .card{
-      border:1px solid var(--border);
-      border-radius:12px;
-      padding:24px;
-      background:#fff
-    }
+    .card{border:1px solid var(--border);border-radius:12px;padding:24px;background:#fff}
 
-    /* Sections */
     section{margin-bottom:72px}
 
-    /* Selected Work */
     .work-list{display:grid;gap:20px}
-    .work-item{
-      padding:20px 0;
-      border-bottom:1px solid var(--border)
-    }
+    .work-item{padding:20px 0;border-bottom:1px solid var(--border)}
     .work-item:last-child{border-bottom:none}
-    .work-meta{font-size:13px;color:var(--sage-dark);margin-bottom:6px}
-    .work-item p{margin-bottom:8px}
 
-    /* Resume */
-    .resume{
+    .resume{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+
+    /* Photography grid */
+    .photo-grid{
       display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:40px
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:16px;
+      margin-top:24px;
     }
-    .role{margin-bottom:28px}
-    .role-title{font-weight:600}
-    .role-org{color:var(--sage-dark)}
-    ul{margin:8px 0 0 18px;color:var(--muted)}
-
-    /* Footer */
-    footer{
-      padding-top:32px;
-      border-top:1px solid var(--border);
-      font-size:13px;color:var(--muted)
+    .photo-grid img{
+      width:100%;
+      border-radius:12px;
+      border:1px solid var(--border);
+      object-fit:cover;
     }
 
-    /* Responsive */
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .resume{grid-template-columns:1fr}
-    }
+    footer{padding-top:32px;border-top:1px solid var(--border);font-size:13px;color:var(--muted)}
+
+    @media(max-width:900px){.hero{grid-template-columns:1fr}.resume{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <div class="container">
+
+    <!-- Add your headshot here -->
+    <img src="photos/headshot.jpg" alt="Headshot of Josephine Huddleston" class="headshot" />
 
     <header>
       <div class="brand">
@@ -144,181 +126,37 @@
     <section class="hero">
       <div>
         <h1>Clear, reliable digital communication that supports people, programs, and long-term growth</h1>
-        <p>I work at the intersection of digital marketing, asset management, and project coordination. My strength is bringing structure to creative work—aligning stakeholders, timelines, and brand standards across channels.</p>
+        <p>I work at the intersection of digital marketing, asset management, and project coordination...</p>
       </div>
       <div class="hero-accent">
         <p><strong>Focus areas</strong></p>
-        <p>Digital asset management · Social media coordination · Event communications · Cross‑functional project support · Retail & nonprofit marketing</p>
-      </div>
-    </section>
-
-    
-    <section id="work">
-      <h2>Selected Work</h2>
-      <div class="work-list">
-        <div class="work-item">
-          <h3>Fruits of Faith Gala — Capital Campaign</h3>
-          <div class="work-meta">St. Elias Antiochian Orthodox Church</div>
-          <p>Campaign communications and digital promotion for a large-scale fundraising gala supporting the St. Elias capital campaign.</p>
-          <ul>
-            <li>Coordinated digital content across website, email, and social media</li>
-            <li>Supported visual storytelling and event branding</li>
-            <li>Aligned messaging with leadership and finance teams</li>
-          </ul>
-        </div>
+        <p>Digital asset management · Social media coordination · Event communications...</p>
       </div>
     </section>
 
     <section id="photography">
       <h2>Film Photography</h2>
-      <p style="max-width:720px;color:var(--muted);font-size:14px">
-        A small selection of analog photography focused on composition, light, and texture. Film photography informs my visual judgment and attention to detail in professional work.
-      </p>
-      <p style="font-size:13px;color:var(--muted);margin-top:16px;margin-bottom:12px">
-        All images shot on Kodak Ultramax 400 Color Print Film (35mm, 36 exposures).
-      </p>
+      <p style="max-width:720px;color:var(--muted);font-size:14px">A small selection...</p>
+
+      <!-- FIXED IMAGE PATH EXAMPLES -->
       <div class="photo-grid">
-        <img src="photos/photo1.jpg" alt="Film photography sample" />
-        <img src="photos/photo2.jpg" alt="Film photography sample" />
-        <img src="photos/photo3.jpg" alt="Film photography sample" />
+        <img src="photos/photo1.jpg" alt="Film photo 1" />
+        <img src="photos/photo2.jpg" alt="Film photo 2" />
+        <img src="photos/photo3.jpg" alt="Film photo 3" />
       </div>
     </section>
-
-    
-
-    <section id="experience">
-      <h2>Professional Experience</h2>
-      <p>Roles demonstrating digital marketing execution, program coordination, and operational support across retail, nonprofit, and academic environments.</p>
-
-      <div class="work-list">
-        <div class="work-item">
-          <h3>Associate Category Program Manager — Digital Asset Management</h3>
-          <div class="work-meta">Whole Foods Market · Austin, TX</div>
-          <p>Support national retail programs through accurate, timely deployment of digital promotional assets and content.</p>
-          <ul>
-            <li>Maintain and deploy large-scale digital asset libraries using proprietary DAM tools</li>
-            <li>Coordinate product photography, sample logistics, and studio schedules</li>
-            <li>Partner cross-functionally with merchandising, marketing, and brand teams</li>
-            <li>Support in-store digital venue screens and quarterly content transitions</li>
-          </ul>
-        </div>
-
-        <div class="work-item">
-          <h3>Payment Risk Management Specialist</h3>
-          <div class="work-meta">H-E-B Grocery</div>
-          <ul>
-            <li>Analyzed and validated transactional data across 200+ locations</li>
-            <li>Produced weekly and monthly performance reports for leadership</li>
-            <li>Improved fraud prevention workflows through cross-team collaboration</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="resume" style="margin-bottom:72px">
-      <h2>Resume</h2>
-      <p style="max-width:720px;color:var(--muted)">
-        A detailed overview of my professional background, experience, and skills is available in PDF format.
-      </p>
-      <p style="margin-top:24px">
-        <a href="Josephine_s_Resume.pdf" target="_blank" class="button">Download Resume (PDF)</a>
-      </p>
-    </section>
-
-    <section id="skills">
-      <h2>Skills & Tools</h2>
-      <p><strong>Digital & Technical</strong></p>
-      <p>Digital Asset Management · Excel (Advanced) · Project Management Tools · Salesforce · Slack · Social Media Strategy · Photography Coordination · Adobe Creative Suite · Basic HTML/CSS</p>
-
-      <p><strong>Languages & Certifications</strong></p>
-      <p>English (Fluent) · German (Advanced) · Spanish (Intermediate)<br>
-      Google Ads Certified · Ethics & Integrity in Ministry · Responsive Classroom</p>
-    </section>
-
-    <section id="leadership">
-      <h2>Leadership & Community Involvement</h2>
-      <div class="work-list">
-        <div class="work-item">
-          <h3>Vice Chair — Media & Communications</h3>
-          <div class="work-meta">St. Elias Antiochian Orthodox Church</div>
-          <ul>
-            <li>Lead communications strategy for fundraising campaigns and events</li>
-            <li>Coordinate messaging across design, finance, and leadership teams</li>
-            <li>Strengthen parish engagement through cohesive digital outreach</li>
-          </ul>
-        </div>
-
-        <div class="work-item">
-          <h3>President & Social Media Director</h3>
-          <div class="work-meta">Collegiate Entrepreneurs’ Organization (UIW)</div>
-          <ul>
-            <li>Increased social media engagement by 35% and membership by 20%</li>
-            <li>Planned workshops and networking events with industry partners</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    
-
-    <section id="interests" style="margin-bottom:64px">
-      <h2 style="font-size:22px;font-weight:500">Personal Interests</h2>
-      <p style="max-width:720px;color:var(--muted);font-size:14px">Personal interests that complement my professional work by strengthening visual judgment, patience with processes, and long-term systems thinking.</p>
-      
-      <div class="work-list" style="gap:28px;margin-top:24px">
-        <div class="work-item" style="border-bottom:none;padding:0">
-          <h3 style="font-size:15px;font-weight:500;color:var(--sage-dark)">Film Photography</h3>
-          <p style="font-size:14px">Practice in analog photography with an emphasis on composition, light, and intentional framing—skills that directly inform my eye for content quality and visual consistency.</p>
-        </div>
-
-        <div class="work-item" style="border-bottom:none;padding:0">
-          <h3 style="font-size:15px;font-weight:500;color:var(--sage-dark)">Baking & Process Craft</h3>
-          <p style="font-size:14px">An interest rooted in precision, timing, and iteration—mirroring the structured workflows required for successful program execution.</p>
-        </div>
-
-        <div class="work-item" style="border-bottom:none;padding:0">
-          <h3 style="font-size:15px;font-weight:500;color:var(--sage-dark)">Gardening & Sustainability</h3>
-          <p style="font-size:14px">Hands-on experience with seasonal planning and long-term care, reinforcing patience, adaptability, and systems-based thinking.</p>
-        </div>
-
-        <div class="work-item" style="border-bottom:none;padding:0">
-          <h3 style="font-size:15px;font-weight:500;color:var(--sage-dark)">Floral Design (Professional Certification)</h3>
-          <p style="font-size:14px">Professionally certified in floral design, with experience translating conceptual direction into cohesive visual arrangements and event-ready presentation.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>For professional inquiries or collaboration opportunities:</p>
-      <p><strong>Email:</strong> <a href="mailto:josephinelhuddleston@gmail.com">josephinelhuddleston@gmail.com</a><br>
-         <strong>Phone:</strong> 979‑253‑3523</p>
-    </section>
-
-    <footer>
-      © Josephine Huddleston · Built as a static GitHub Pages portfolio
-    </footer>
 
   </div>
+
 <script>
-  // Scroll-based nav highlight (subtle, no animation)
-  const sections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('nav a');
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
-      if (pageYOffset >= sectionTop) {
-        current = section.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.style.fontWeight = '400';
-      if (link.getAttribute('href') === `#${current}`) {
-        link.style.fontWeight = '600';
-      }
+  const sections=document.querySelectorAll('section');
+  const navLinks=document.querySelectorAll('nav a');
+  window.addEventListener('scroll',()=>{
+    let current='';
+    sections.forEach(s=>{if(pageYOffset>=s.offsetTop-120) current=s.getAttribute('id')});
+    navLinks.forEach(l=>{
+      l.style.fontWeight='400';
+      if(l.getAttribute('href')===`#${current}`) l.style.fontWeight='600';
     });
   });
 </script>
