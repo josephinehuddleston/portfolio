@@ -4,311 +4,237 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio — Josephine Huddleston</title>
-  
-  <!-- New Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
-      font-family: 'Manrope', sans-serif !important;
+      font-family: 'Manrope', sans-serif;
       margin: 0;
       padding: 0;
-      color: #222;
-      line-height: 1.65;
-      background:#ffffff;
+      color: #1d1f1d;
+      background: #ffffff;
+      line-height: 1.75;
+      overflow-x: hidden;
     }
 
-    /* Section Dividers */
-    section {
-      padding: 60px 50px;
-      max-width: 1000px;
-      margin: auto;
-      border-bottom: 2px solid #e3eadf;
-    }
-    section:last-of-type {
-      border-bottom:none;
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
     }
 
-    /* Updated Nav */
+    a {
+      color: #4a6b4a;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    a:hover { color: #2f402f; }
+
+    /* Navigation */
     nav {
       background: #2f3a2f;
-      color: white;
-      padding: 14px;
+      padding: 16px;
       text-align: center;
-      font-weight:600;
+      position: sticky;
+      top: 0;
+      z-index: 20;
     }
     nav a {
+      margin: 0 20px;
       color: white;
-      margin: 0 18px;
-      text-decoration: none;
-      font-size: 15px;
+      font-size: 16px;
     }
-    nav a:hover {
-      color:#c9d9c5;
+    nav a:hover { color: #dce8d6; }
+
+    /* Hero Section */
+    header {
+      background: #f4f7f3;
+      padding: 100px 20px 90px;
+      text-align: center;
+      border-bottom: 4px solid #d2e0d0;
+      animation: fadeIn 1.2s ease;
+    }
+    header img {
+      width: 300px;
+      border-radius: 50%;
+      border: 6px solid #c8d7c3;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      animation: floatIn 1.6s ease;
     }
 
-    /* Film grid remains */
+    /* Core Section Styling */
+    section {
+      padding: 80px 50px;
+      max-width: 1100px;
+      margin: auto;
+      border-bottom: 2px solid #e0eadc;
+      animation: fadeUp 1s ease;
+    }
+    section:last-of-type { border-bottom: none; }
+
+    .section-title {
+      font-size: 34px;
+      color: #2f3a2f;
+      margin-bottom: 30px;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    /* Unified Overview Section */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+    .overview-block h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #3c4a3c;
+      font-weight: 600;
+    }
+
+    /* Film Photography */
     .film-photos {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      margin-top: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
     }
     .film-photos img {
-      width:100%;border-radius:12px;
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+      transition: transform 0.4s ease;
     }
-  
-ul {
-  margin: 18px 0;
-  padding-left: 0;
-  list-style: none;
-}
+    .film-photos img:hover {
+      transform: scale(1.04);
+    }
 
-ul li {
-  margin-bottom: 10px;
-  padding-left: 20px;
-  position: relative;
-  line-height: 1.55;
-}
+    /* Education & Skills */
+    .edu-skill {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
 
-ul li::before {
-  content: '';
-  width: 7px;
-  height: 7px;
-  background: #9fb69a;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 9px;
-}
+    /* Contact */
+    #contact {
+      background: #f6faf6;
+      border: 1px solid #dbe7d6;
+      border-radius: 18px;
+      text-align: center;
+    }
 
-/* Heading font */
-h1, h2, h3 { font-family:'Playfair Display', serif !important; }
+    footer {
+      background: #2f3a2f;
+      padding: 50px 20px;
+      color: white;
+      text-align: center;
+      border-top: 4px solid #d2e0d0;
+    }
 
-/* Clean link styling */
-a { color:#2f3a2f; text-decoration:none; font-weight:600; }
-a:hover { color:#6f8b6c; text-decoration:underline; }
-
-</style>
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes floatIn {
+      0% { opacity: 0; transform: scale(0.85); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+  </style>
 </head>
 <body>
 
+<!-- NAVIGATION -->
 <nav>
-  <a href="#about">About</a>
-  <a href="#work">Work</a>
+  <a href="#overview">Overview</a>
   <a href="#film">Film</a>
-  <a href="#professional">Experience</a>
-  <a href="#leadership">Leadership</a>
   <a href="#education">Education</a>
   <a href="#skills">Skills</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<header style="background:#f7faf7; padding:60px 20px; text-align:center; border-bottom:4px solid #dce7d8;">
-  <img src="IMG_4783.JPG" alt="Headshot" style="width:160px; border-radius:50%; border:4px solid #c9d9c5;" />
-  <h1 style="font-size:42px; margin-top:20px; color:#2f3a2f; font-weight:700;">Josephine Huddleston</h1>
-  <p style="font-size:20px; color:#5f6f5f; max-width:640px; margin:auto; line-height:1.5;">
+<!-- HERO -->
+<header>
+  <img src="IMG_4783.JPG" alt="Headshot" />
+  <h1 style="font-size:48px; margin-top:30px; color:#2f3a2f;">Josephine Huddleston</h1>
+  <p style="font-size:22px; max-width:700px; margin:auto; color:#5f6f5f;">
     Clear, structured communication and digital support that strengthens programs, elevates storytelling, and moves work forward.
   </p>
 </header>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>I am a communications and media-focused creative specializing in strategy, writing, branding, and visual storytelling. I combine my background in public relations, digital content, and photography to help organizations communicate clearly and authentically.</p>
-</section>
+<!-- UNIFIED OVERVIEW SECTION -->
+<section id="overview">
+  <h2 class="section-title">Overview</h2>
 
-<section id="work">
-  <h2>Selected Work</h2>
-  <div class="work-list">
-    <div class="work-item">
-      <h3><a href="https://www.sainteliaschurch.org/post/fruits-of-faith-gala-a-mediterranean-soir%C3%A9e-to-support-the-st-elias-capital-campaign" target="_blank">Fruits of Faith Gala — Capital Campaign</a></h3>
-      <div class="work-meta">St. Elias Antiochian Orthodox Church</div>
-      <p>Campaign communications, event branding support, and digital promotion for a major fundraising gala benefiting the capital campaign.</p>
+  <div class="overview-grid">
+
+    <div class="overview-block">
+      <h3>About Me</h3>
+      <p>I am a communications-focused creative specializing in writing, brand alignment, digital content, and visual storytelling. My background blends PR, marketing, and photography—giving me a strong eye for clarity, structure, and voice.</p>
+
+      <h3>Selected Work</h3>
+      <p><strong><a href="https://www.sainteliaschurch.org/post/fruits-of-faith-gala-a-mediterranean-soir%C3%A9e-to-support-the-st-elias-capital-campaign" target="_blank">Fruits of Faith Gala — Capital Campaign</a></strong><br>
+      Campaign communications, branding alignment, and media support for a major fundraising gala.</p>
+    </div>
+
+    <div class="overview-block">
+      <h3>Leadership & Community</h3>
+      <p><strong>Vice Chair – Media & Communications</strong><br>St. Elias Antiochian Orthodox Church<br>
+      Strategic communications, campaign coordination, and community engagement.</p>
+
+      <p><strong>President & Social Media Director</strong><br>UIW Collegiate Entrepreneurs’ Organization<br>
+      Directed brand strategy, digital communications, and event marketing.</p>
+
+      <h3>Professional Experience</h3>
+      <p>Experience across digital asset management, program coordination, photography operations, fraud prevention, and education—strengthening my ability to support high-volume workflows with accuracy and clarity.</p>
     </div>
   </div>
 </section>
 
+<!-- FILM PHOTOGRAPHY -->
 <section id="film">
-  <h2>Film Photography</h2>
-  <p>A selection of 35mm film work.</p>
+  <h2 class="section-title">Film Photography</h2>
+  <p>A small selection of 35mm photography focused on composition, texture, and natural light.</p>
+
   <div class="film-photos">
-    <img src="photo1.jpeg" alt="Film Photo 1" />
-    <img src="photo2.jpeg" alt="Film Photo 2" />
-    <img src="photo3.jpeg" alt="Film Photo 3" />
+    <img src="photo1.jpeg" />
+    <img src="photo2.jpeg" />
+    <img src="photo3.jpeg" />
   </div>
 </section>
 
-<section id="professional">
-  <h2>Professional Work Experience</h2>
-
-  <div class="work-item">
-    <h3>Associate Category Program Manager, Digital Asset Management</h3>
-    <div class="work-meta">Whole Foods Market · Austin, TX · Jan 2025 – Present</div>
-    <ul>
-      <li>Manage creation, accuracy, and on-time deployment of large-scale promotional assets using proprietary DAM systems, ensuring alignment with national marketing strategy.</li>
-      <li>Coordinate product photography workflows — developing shot lists, tracking samples, scheduling studio timelines, and collaborating with photographers and project managers.</li>
-      <li>Lead supplier-facing communication, fostering strong partnerships across merchandising, marketing, and branded vendors.</li>
-      <li>Execute monthly and evergreen content deliverables, maintaining consistent quality standards and supporting cross‑functional business needs.</li>
-      <li>Provide end‑to‑end support for digital venue screens in all stores, including quarterly menu flips, troubleshooting, and feature updates.</li>
-    </ul>
-  </div>
-
-  <div class="work-item">
-    <h3>Pre‑K 4 Assistant Teacher</h3>
-    <div class="work-meta">St. Michael’s Catholic Preparatory Academy · Austin, TX · Aug 2024 – Dec 2024</div>
-    <ul>
-      <li>Supported daily classroom operations and assisted in planning and delivering curriculum‑aligned activities.</li>
-      <li>Supervised after‑school programs and coordinated with auxiliary teams to maintain a safe, structured environment.</li>
-      <li>Tracked student progress, communicated regularly with parents, and contributed to a positive learning environment.</li>
-      <li>Led creative and developmental activities promoting teamwork, curiosity, and social growth.</li>
-    </ul>
-  </div>
-
-  <div class="work-item">
-    <h3>Payment Risk Management Specialist</h3>
-    <div class="work-meta">H‑E‑B Grocery · San Antonio, TX · Aug 2023 – Jul 2024</div>
-    <ul>
-      <li>Analyzed and validated transactional data for 200+ store locations to identify fraudulent activity and reduce financial risk.</li>
-      <li>Produced weekly and monthly financial reports, providing leadership with actionable insights and trend analysis.</li>
-      <li>Improved fraud‑prevention workflows by collaborating with cross‑department teams.</li>
-      <li>Streamlined tracking processes using Salesforce and Slack for real‑time issue resolution.</li>
-    </ul>
-  </div>
-
-  <div class="work-item">
-    <h3>Studio Traffic Coordinator</h3>
-    <div class="work-meta">H‑E‑B Grocery · San Antonio, TX · Nov 2022 – Aug 2023</div>
-    <ul>
-      <li>Managed merchandising workflows including SKU setup, product documentation, and promotional calendars.</li>
-      <li>Coordinated with photography, advertising, and merchandising teams to ensure timely delivery of digital assets.</li>
-      <li>Improved data‑tracking systems using advanced Excel tools, reducing asset errors and increasing operational efficiency.</li>
-      <li>Reviewed promotional materials for brand consistency and alignment with product strategy.</li>
-    </ul>
-  </div>
-
-  <div class="work-item">
-    <h3>Lead Cashier</h3>
-    <div class="work-meta">H‑E‑B Grocery · Houston, TX · Aug 2019 – Nov 2022</div>
-    <ul>
-      <li>Trained and supervised team members to maintain high service standards.</li>
-      <li>Supported promotional planning by maintaining accurate pricing and inventory oversight.</li>
-      <li>Monitored sales trends and provided recommendations to improve product placement and store flow.</li>
-      <li>Coordinated schedules and resources during high‑volume periods to maintain operational smoothness.</li>
-    </ul>
-  </div>
-</section>
-
-<section id="leadership">
-  <h2>Leadership & Community Involvement</h2>
-
-  <div class="work-item">
-    <h3>Vice Chair — Media & Communications</h3>
-    <div class="work-meta">St. Elias Antiochian Orthodox Church · Austin, TX · Jan 2025 – Present</div>
-    <ul>
-      <li>Partner with committee leaders to drive long‑term communication strategy and community engagement.</li>
-      <li>Coordinate messaging across fundraising, design, finance, and leadership teams.</li>
-      <li>Support strategic planning, documentation, and high‑priority initiatives.</li>
-      <li>Build strong relationships within the parish to deepen involvement and support campaign goals.</li>
-    </ul>
-  </div>
-
-  <div class="work-item">
-    <h3>President & Social Media Director</h3>
-    <div class="work-meta">Collegiate Entrepreneurs’ Organization · UIW</div>
-    <ul>
-      <li>Directed organization marketing strategy, increasing engagement by 35% and membership by 20%.</li>
-      <li>Planned workshops, events, and partnerships with industry leaders to support student development.</li>
-      <li>Managed brand presence across social channels with cohesive voice and visual identity.</li>
-      <li>Encouraged collaboration, leadership, and entrepreneurial growth within the student community.</li>
-    </ul>
-  </div>
-
-  <div class="work-item">
-    <h3>Vice President</h3>
-    <div class="work-meta">UIW Sustainability Organization · San Antonio, TX</div>
-    <ul>
-      <li>Organized educational events and campaigns promoting sustainable practices on campus.</li>
-      <li>Presented sustainable retail and operations strategies to university leadership.</li>
-      <li>Developed initiatives that increased environmental awareness within the campus community.</li>
-    </ul>
-  </div>
-</section>
-
+<!-- EDUCATION + SKILLS -->
 <section id="education">
-  <h2>Education</h2>
+  <h2 class="section-title">Education & Skills</h2>
 
-  <div class="work-item">
-    <h3>Master of Business Administration</h3>
-    <div class="work-meta">Texas A&M University · College Station, TX · Expected Dec 2026</div>
-    <p>Focus on strategic management, leadership, and digital business systems.</p>
-  </div>
+  <div class="edu-skill">
 
-  <div class="work-item">
-    <h3>Bachelor of Business Administration, Marketing</h3>
-    <div class="work-meta">University of the Incarnate Word · San Antonio, TX · May 2024</div>
-    <p>Minor in Corporate Communications</p>
+    <div>
+      <h3>Education</h3>
+      <p><strong>Master of Business Administration</strong><br>Texas A&M University · Expected Dec 2026</p>
+      <p><strong>BBA in Marketing</strong><br>University of the Incarnate Word · May 2024<br>Minor in Corporate Communications</p>
+    </div>
+
+    <div>
+      <h3>Skills</h3>
+      <p>
+        Skilled in digital asset management, project coordination, photography production workflows, and data-driven decision-making. Experienced with Excel, Salesforce, Adobe Creative Suite, CRM platforms, and high-volume communication systems. Strong writing, brand alignment, and cross-functional collaboration. Fluent in English, advanced in German, and conversational in Spanish.
+      </p>
+    </div>
+
   </div>
 </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <p style="max-width:800px; line-height:1.65; color:#444; font-size:16px;">
-    I bring a strong blend of digital expertise, operational coordination, and creative capability. My background includes advanced work in data-driven project management, digital asset systems, and cross-functional communication. I’m highly proficient in organizing large volumes of information, supporting complex workflows, and ensuring accuracy and consistency across all digital touchpoints. My technical foundation spans tools like Excel, Salesforce, DAM platforms, Adobe Creative Suite, and CRM systems—paired with strong writing, brand alignment, and visual judgment from years of photography and content coordination. I also bring multilingual communication skills in German and Spanish, strengthening my ability to support diverse teams and audiences.
-  </p>
-</section>
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="section-title" style="text-align:center;">Contact</h2>
 
+  <p style="font-size:18px; max-width:750px; margin:auto; color:#444;">I’m always open to opportunities in digital communications, project coordination, content strategy, and creative media. Feel free to reach out.</p>
 
-
-
-
-<section id="contact" style="background:#f7faf7; border:1px solid #e3eadf; border-radius:14px; padding:60px 50px; margin-top:60px;">
-  <h2 style="text-align:center; color:#2f3a2f;">Contact</h2>
-  
-  <p style="font-size:17px; color:#444; max-width:780px; margin:20px auto 40px; text-align:center; line-height:1.65;">
-    I’m always open to opportunities in digital communications, content strategy, project coordination, and creative work. If you'd like to connect, collaborate, or discuss a project, feel free to reach out.
-  </p>
-
-  <div style="display:flex; justify-content:center; gap:60px; flex-wrap:wrap; margin-top:20px;">
-    <div style="text-align:center;">
-      <h3 style="color:#6f8b6c; margin-bottom:8px;">Email</h3>
-      <a href="mailto:josephinelhuddleston@gmail.com" style="color:#2f3a2f; font-weight:600; font-size:16px;">josephinelhuddleston@gmail.com</a>
-    </div>
-
-    <div style="text-align:center;">
-      <h3 style="color:#6f8b6c; margin-bottom:8px;">Phone</h3>
-      <p style="color:#2f3a2f; font-weight:600; font-size:16px;">979‑253‑3523</p>
-    </div>
-
-    <div style="text-align:center;">
-      <h3 style="color:#6f8b6c; margin-bottom:8px;">LinkedIn</h3>
-      <a href="https://www.linkedin.com/in/josephine-huddleston" target="_blank" style="color:#2f3a2f; font-weight:600; font-size:16px;">linkedin.com/in/josephine-huddleston</a>
-    </div>
-  </div>
-</section>
-
-<footer style="background:#2f3a2f; padding:40px 20px; text-align:center; margin-top:80px; border-top:4px solid #dce7d8; color:white; font-size:15px;">
-  <p>© Josephine Huddleston · Austin, TX</p>
-  <p style="margin-top:10px; font-size:14px; opacity:0.9;">Website design with clean structure, accessibility, and subtle sage creatives.</p>
-  <p style="margin-top:20px;">
-    <a href="#" onclick="document.getElementById('resumeModal').style.display='block'" style="color:#d0e0d0; font-weight:700; font-size:17px;">View Resume</a>
-  </p>
-</footer>
-
-<!-- Pop-Up Résumé Modal -->
-<div id="resumeModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); backdrop-filter:blur(3px); z-index:9999;">
-  <div style="background:white; width:85%; max-width:950px; margin:60px auto; padding:30px; border-radius:14px; position:relative; box-shadow:0 8px 20px rgba(0,0,0,0.2);">
-    <span onclick="document.getElementById('resumeModal').style.display='none'" style="position:absolute; top:16px; right:22px; font-size:30px; cursor:pointer; font-weight:600;">&times;</span>
-    <iframe src="Josephine_s_Resume.pdf" style="width:100%; height:80vh; border:none; border-radius:10px;"></iframe>
-  </div>
-</div>
-
-<!-- Resume Popup Modal -->
-<div id="resumeModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.65); backdrop-filter:blur(3px); z-index:9999;">
-  <div style="background:white; width:80%; max-width:900px; margin:60px auto; padding:30px; border-radius:12px; position:relative;">
-    <span onclick="document.getElementById('resumeModal').style.display='none'" style="position:absolute; top:18px; right:20px; font-size:24px; cursor:pointer;">&times;</span>
-    <iframe src="Josephine_s_Resume.pdf" style="width:100%; height:80vh; border:none; border-radius:8px;"></iframe>
-  </div>
-</div>
-
-</body>
-</html>
+  <div style="margin-top:40px; display:flex; justify-content:center; gap:60px; flex-wrap:wrap;">
