@@ -4,61 +4,85 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio — Josephine Huddleston</title>
+  
+  <!-- New Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Manrope', sans-serif !important;
       margin: 0;
       padding: 0;
       color: #222;
-      line-height: 1.6;
+      line-height: 1.65;
+      background:#ffffff;
     }
-    header {
-      padding: 40px;
-      text-align: center;
-      background: #f5f5f5;
+
+    /* Section Dividers */
+    section {
+      padding: 60px 50px;
+      max-width: 1000px;
+      margin: auto;
+      border-bottom: 2px solid #e3eadf;
     }
-    header img {
-      width: 220px;
-      border-radius: 50%;
+    section:last-of-type {
+      border-bottom:none;
     }
+
+    /* Updated Nav */
     nav {
-      background: #222;
+      background: #2f3a2f;
       color: white;
-      padding: 12px;
+      padding: 14px;
       text-align: center;
+      font-weight:600;
     }
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 18px;
       text-decoration: none;
-      font-weight: bold;
+      font-size: 15px;
     }
-    section {
-      padding: 50px;
-      max-width: 900px;
-      margin: auto;
+    nav a:hover {
+      color:#c9d9c5;
     }
-    h2 { margin-top: 0; }
 
-    /* Work Section */
-    .work-list { margin-top: 20px; }
-    .work-item { margin-bottom: 40px; }
-    .work-item h3 a { color: #222; text-decoration: none; }
-    .work-meta { font-weight: bold; margin-bottom: 6px; color: #444; }
-
-    /* Film Photo Grid */
+    /* Film grid remains */
     .film-photos {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
       margin-top: 25px;
     }
     .film-photos img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
+      width:100%;border-radius:12px;
     }
-  </style>
+  
+ul {
+  margin: 18px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.55;
+}
+
+ul li::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: #9fb69a;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 9px;
+}
+
+</style>
 </head>
 <body>
 
@@ -73,10 +97,12 @@
   <a href="#contact">Contact</a>
 </nav>
 
-<header>
-  <img src="IMG_4783.JPG" alt="Headshot" />
-  <h1>Josephine Huddleston</h1>
-  <p>Communications · Digital Strategy · Media</p>
+<header style="background:#f7faf7; padding:60px 20px; text-align:center; border-bottom:4px solid #dce7d8;">
+  <img src="IMG_4783.JPG" alt="Headshot" style="width:160px; border-radius:50%; border:4px solid #c9d9c5;" />
+  <h1 style="font-size:42px; margin-top:20px; color:#2f3a2f; font-weight:700;">Josephine Huddleston</h1>
+  <p style="font-size:20px; color:#5f6f5f; max-width:640px; margin:auto; line-height:1.5;">
+    Clear, structured communication and digital support that strengthens programs, elevates storytelling, and moves work forward.
+  </p>
 </header>
 
 <section id="about">
@@ -120,17 +146,17 @@
       <li>Manage creation, accuracy, and on-time deployment of large-scale promotional assets using proprietary DAM systems, ensuring alignment with national marketing strategy.</li>
       <li>Coordinate product photography workflows — developing shot lists, tracking samples, scheduling studio timelines, and collaborating with photographers and project managers.</li>
       <li>Lead supplier-facing communication, fostering strong partnerships across merchandising, marketing, and branded vendors.</li>
-      <li>Execute monthly and evergreen content deliverables, maintaining consistent quality standards and supporting cross-functional business needs.</li>
-      <li>Provide end-to-end support for digital venue screens in all stores, including quarterly menu flips, troubleshooting, and feature updates.</li>
+      <li>Execute monthly and evergreen content deliverables, maintaining consistent quality standards and supporting cross‑functional business needs.</li>
+      <li>Provide end‑to‑end support for digital venue screens in all stores, including quarterly menu flips, troubleshooting, and feature updates.</li>
     </ul>
   </div>
 
   <div class="work-item">
-    <h3>Pre-K 4 Assistant Teacher</h3>
+    <h3>Pre‑K 4 Assistant Teacher</h3>
     <div class="work-meta">St. Michael’s Catholic Preparatory Academy · Austin, TX · Aug 2024 – Dec 2024</div>
     <ul>
-      <li>Supported daily classroom operations and assisted in planning and delivering curriculum-aligned activities.</li>
-      <li>Supervised after-school programs and coordinated with auxiliary teams to maintain a safe, structured environment.</li>
+      <li>Supported daily classroom operations and assisted in planning and delivering curriculum‑aligned activities.</li>
+      <li>Supervised after‑school programs and coordinated with auxiliary teams to maintain a safe, structured environment.</li>
       <li>Tracked student progress, communicated regularly with parents, and contributed to a positive learning environment.</li>
       <li>Led creative and developmental activities promoting teamwork, curiosity, and social growth.</li>
     </ul>
@@ -138,34 +164,34 @@
 
   <div class="work-item">
     <h3>Payment Risk Management Specialist</h3>
-    <div class="work-meta">H-E-B Grocery · San Antonio, TX · Aug 2023 – Jul 2024</div>
+    <div class="work-meta">H‑E‑B Grocery · San Antonio, TX · Aug 2023 – Jul 2024</div>
     <ul>
       <li>Analyzed and validated transactional data for 200+ store locations to identify fraudulent activity and reduce financial risk.</li>
       <li>Produced weekly and monthly financial reports, providing leadership with actionable insights and trend analysis.</li>
-      <li>Improved fraud-prevention workflows by collaborating with cross-department teams.</li>
-      <li>Streamlined tracking processes using Salesforce and Slack for real-time issue resolution.</li>
+      <li>Improved fraud‑prevention workflows by collaborating with cross‑department teams.</li>
+      <li>Streamlined tracking processes using Salesforce and Slack for real‑time issue resolution.</li>
     </ul>
   </div>
 
   <div class="work-item">
     <h3>Studio Traffic Coordinator</h3>
-    <div class="work-meta">H-E-B Grocery · San Antonio, TX · Nov 2022 – Aug 2023</div>
+    <div class="work-meta">H‑E‑B Grocery · San Antonio, TX · Nov 2022 – Aug 2023</div>
     <ul>
       <li>Managed merchandising workflows including SKU setup, product documentation, and promotional calendars.</li>
       <li>Coordinated with photography, advertising, and merchandising teams to ensure timely delivery of digital assets.</li>
-      <li>Improved data-tracking systems using advanced Excel tools, reducing asset errors and increasing operational efficiency.</li>
+      <li>Improved data‑tracking systems using advanced Excel tools, reducing asset errors and increasing operational efficiency.</li>
       <li>Reviewed promotional materials for brand consistency and alignment with product strategy.</li>
     </ul>
   </div>
 
   <div class="work-item">
     <h3>Lead Cashier</h3>
-    <div class="work-meta">H-E-B Grocery · Houston, TX · Aug 2019 – Nov 2022</div>
+    <div class="work-meta">H‑E‑B Grocery · Houston, TX · Aug 2019 – Nov 2022</div>
     <ul>
       <li>Trained and supervised team members to maintain high service standards.</li>
       <li>Supported promotional planning by maintaining accurate pricing and inventory oversight.</li>
       <li>Monitored sales trends and provided recommendations to improve product placement and store flow.</li>
-      <li>Coordinated schedules and resources during high-volume periods to maintain operational smoothness.</li>
+      <li>Coordinated schedules and resources during high‑volume periods to maintain operational smoothness.</li>
     </ul>
   </div>
 </section>
@@ -193,46 +219,63 @@
 
 <section id="skills">
   <h2>Skills</h2>
-
-  <h3>Technical & Digital Skills</h3>
-  <ul>
-    <li>Advanced Microsoft Excel (data automation, pivot tables, complex formulas)</li>
-    <li>Digital Asset Management (enterprise-level systems, metadata organization)</li>
-    <li>Project Management Tools (Asana, Monday, Smartsheet)</li>
-    <li>Salesforce (intermediate level workflow and reporting)</li>
-    <li>Slack (cross-team communication workflows)</li>
-    <li>Social Media Marketing & Strategy (campaign planning, analytics)</li>
-    <li>Photography & Content Coordination (studio workflows + 35mm film)</li>
-    <li>Data Management & Quality Assurance</li>
-    <li>Adobe Creative Suite (Photoshop, Lightroom, Illustrator — intermediate)</li>
-    <li>CRM Tools (customer lifecycle tracking, segmentation)</li>
-    <li>Basic SQL (queries, database navigation)</li>
-    <li>Basic HTML/CSS</li>
-  </ul>
-
-  <h3>Languages</h3>
-  <ul>
-    <li>Fluent English</li>
-    <li>Advanced German</li>
-    <li>Intermediate Spanish</li>
-  </ul>
-
-  <h3>Certifications</h3>
-  <ul>
-    <li>Google Ads Certified</li>
-    <li>Ethics & Integrity in Ministry</li>
-    <li>Responsive Classroom</li>
-  </ul>
+  <p style="max-width:800px; line-height:1.65; color:#444; font-size:16px;">
+    I bring a strong blend of digital expertise, operational coordination, and creative capability. My background includes advanced work in data-driven project management, digital asset systems, and cross-functional communication. I’m highly proficient in organizing large volumes of information, supporting complex workflows, and ensuring accuracy and consistency across all digital touchpoints. My technical foundation spans tools like Excel, Salesforce, DAM platforms, Adobe Creative Suite, and CRM systems—paired with strong writing, brand alignment, and visual judgment from years of photography and content coordination. I also bring multilingual communication skills in German and Spanish, strengthening my ability to support diverse teams and audiences.
+  </p>
 </section>
 
 
 
 
 
-<section id="blog">
-  <h2>Insights & Writing</h2>
-  <p>A future space for writing on communications, digital strategy, creative workflows, and professional development.</p>
+<section id="contact" style="background:#f7faf7; border:1px solid #e3eadf; border-radius:14px; padding:60px 50px; margin-top:60px;">
+  <h2 style="text-align:center; color:#2f3a2f;">Contact</h2>
+  
+  <p style="font-size:17px; color:#444; max-width:780px; margin:20px auto 40px; text-align:center; line-height:1.65;">
+    I’m always open to opportunities in digital communications, content strategy, project coordination, and creative work. If you'd like to connect, collaborate, or discuss a project, feel free to reach out.
+  </p>
+
+  <div style="display:flex; justify-content:center; gap:60px; flex-wrap:wrap; margin-top:20px;">
+    <div style="text-align:center;">
+      <h3 style="color:#6f8b6c; margin-bottom:8px;">Email</h3>
+      <a href="mailto:josephinelhuddleston@gmail.com" style="color:#2f3a2f; font-weight:600; font-size:16px;">josephinelhuddleston@gmail.com</a>
+    </div>
+
+    <div style="text-align:center;">
+      <h3 style="color:#6f8b6c; margin-bottom:8px;">Phone</h3>
+      <p style="color:#2f3a2f; font-weight:600; font-size:16px;">979-253-3523</p>
+    </div>
+
+    <div style="text-align:center;">
+      <h3 style="color:#6f8b6c; margin-bottom:8px;">LinkedIn</h3>
+      <a href="https://www.linkedin.com/in/josephine-huddleston" target="_blank" style="color:#2f3a2f; font-weight:600; font-size:16px;">linkedin.com/in/josephine-huddleston</a>
+    </div>
+  </div>
 </section>
+
+<footer style="background:#2f3a2f; padding:40px 20px; text-align:center; margin-top:80px; border-top:4px solid #dce7d8; color:white; font-size:15px;">
+  <p>© Josephine Huddleston · Austin, TX</p>
+  <p style="margin-top:10px; font-size:14px; opacity:0.9;">Website design with clean structure, accessibility, and subtle sage creatives.</p>
+  <p style="margin-top:20px;">
+    <a href="#" onclick="document.getElementById('resumeModal').style.display='block'" style="color:#d0e0d0; font-weight:700; font-size:17px;">View Resume</a>
+  </p>
+</footer>
+
+<!-- Pop-Up Résumé Modal -->
+<div id="resumeModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); backdrop-filter:blur(3px); z-index:9999;">
+  <div style="background:white; width:85%; max-width:950px; margin:60px auto; padding:30px; border-radius:14px; position:relative; box-shadow:0 8px 20px rgba(0,0,0,0.2);">
+    <span onclick="document.getElementById('resumeModal').style.display='none'" style="position:absolute; top:16px; right:22px; font-size:30px; cursor:pointer; font-weight:600;">&times;</span>
+    <iframe src="Josephine_s_Resume.pdf" style="width:100%; height:80vh; border:none; border-radius:10px;"></iframe>
+  </div>
+</div>
+
+<!-- Resume Popup Modal -->
+<div id="resumeModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.65); backdrop-filter:blur(3px); z-index:9999;">
+  <div style="background:white; width:80%; max-width:900px; margin:60px auto; padding:30px; border-radius:12px; position:relative;">
+    <span onclick="document.getElementById('resumeModal').style.display='none'" style="position:absolute; top:18px; right:20px; font-size:24px; cursor:pointer;">&times;</span>
+    <iframe src="Josephine_s_Resume.pdf" style="width:100%; height:80vh; border:none; border-radius:8px;"></iframe>
+  </div>
+</div>
 
 </body>
 </html>
