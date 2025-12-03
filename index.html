@@ -157,6 +157,7 @@
   <a href="#education">Education</a>
   <a href="#skills">Skills</a>
   <a href="#contact">Contact</a>
+  <a href="#" onclick="document.getElementById('resumeModal').style.display='block'" style="color:#dce8d6; font-weight:700;">Résumé</a>
 </nav>
 
 <!-- HERO -->
@@ -192,7 +193,7 @@
       Directed brand strategy, digital communications, and event marketing.</p>
 
       <h3>Professional Experience</h3>
-      <p>Experience across digital asset management, program coordination, photography operations, fraud prevention, and education—strengthening my ability to support high-volume workflows with accuracy and clarity.</p>
+      <p>Experience across digital asset management, program coordination, photography operations, fraud prevention, and education—strengthening my ability to support high‑volume workflows with accuracy and clarity.</p>
     </div>
   </div>
 </section>
@@ -224,7 +225,7 @@
     <div>
       <h3>Skills</h3>
       <p>
-        Skilled in digital asset management, project coordination, photography production workflows, and data-driven decision-making. Experienced with Excel, Salesforce, Adobe Creative Suite, CRM platforms, and high-volume communication systems. Strong writing, brand alignment, and cross-functional collaboration. Fluent in English, advanced in German, and conversational in Spanish.
+        Skilled in digital asset management, project coordination, photography production workflows, and data‑driven decision-making. Experienced with Excel, Salesforce, Adobe Creative Suite, CRM platforms, and high‑volume communication systems. Strong writing, brand alignment, and cross-functional collaboration. Fluent in English, advanced in German, and conversational in Spanish.
       </p>
     </div>
 
@@ -232,9 +233,47 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" style="background:#f6faf6; border:1px solid #dbe7d6; border-radius:18px; text-align:center; padding:70px 50px;">
   <h2 class="section-title" style="text-align:center;">Contact</h2>
-
   <p style="font-size:18px; max-width:750px; margin:auto; color:#444;">I’m always open to opportunities in digital communications, project coordination, content strategy, and creative media. Feel free to reach out.</p>
 
-  <div style="margin-top:40px; display:flex; justify-content:center; gap:60px; flex-wrap:wrap;">
+  <div style="margin-top:45px; display:flex; justify-content:center; gap:60px; flex-wrap:wrap;">
+    <div style="text-align:center;">
+      <h3 style="color:#6f8b6c; margin-bottom:8px;">Email</h3>
+      <a href="mailto:josephinelhuddleston@gmail.com" style="color:#2f3a2f; font-weight:600; font-size:17px;">josephinelhuddleston@gmail.com</a>
+    </div>
+
+    <div style="text-align:center;">
+      <h3 style="color:#6f8b6c; margin-bottom:8px;">Phone</h3>
+      <p style="color:#2f3a2f; font-weight:600; font-size:17px;">979‑253‑3523</p>
+    </div>
+
+    <div style="text-align:center;">
+      <h3 style="color:#6f8b6c; margin-bottom:8px;">Location</h3>
+      <p style="color:#2f3a2f; font-weight:600; font-size:17px;">Austin, TX</p>
+    </div>
+
+    <div style="text-align:center;">
+      <h3 style="color:#6f8b6c; margin-bottom:8px;">LinkedIn</h3>
+      <a href="https://www.linkedin.com/in/josephine-huddleston" target="_blank" style="color:#2f3a2f; font-weight:600; font-size:17px;">linkedin.com/in/josephine-huddleston</a>
+    </div>
+  </div>
+
+  <div style="margin-top:50px;">
+    <a href="#" onclick="document.getElementById('resumeModal').style.display='block'" style="background:#2f3a2f; color:white; padding:14px 28px; border-radius:10px; font-size:18px; font-weight:600;">View My Résumé</a>
+  </div>
+</section>
+
+<!-- RESUME MODAL -->
+<div id="resumeModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); backdrop-filter:blur(3px); padding-top:60px; z-index:1000;">
+  <div style="background:white; width:80%; max-width:900px; margin:auto; padding:20px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.2); position:relative; animation:fadeIn 0.5s ease;">
+    <span onclick="document.getElementById('resumeModal').style.display='none'" style="position:absolute; top:15px; right:20px; font-size:30px; cursor:pointer; color:#2f3a2f;">&times;</span>
+    <iframe src="Josephine_s_Resume.pdf" style="width:100%; height:80vh; border:none; border-radius:8px;"></iframe>
+  </div>
+</div>
+
+<footer>
+  © Josephine Huddleston · Portfolio
+</footer>
+</body>
+</html>
