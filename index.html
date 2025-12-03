@@ -133,14 +133,17 @@
       </div>
       <nav>
         <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
         <a href="#resume">Resume</a>
+        <a href="#skills">Skills</a>
+        <a href="#leadership">Leadership</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <section class="hero">
       <div>
-        <h1>Clear, reliable digital communication that supports community and growth</h1>
+        <h1>Clear, reliable digital communication that supports people, programs, and long-term growth</h1>
         <p>I work at the intersection of digital marketing, asset management, and project coordination. My strength is bringing structure to creative work—aligning stakeholders, timelines, and brand standards across channels.</p>
       </div>
       <div class="hero-accent">
@@ -150,6 +153,7 @@
     </section>
 
     <section id="work">
+      <h2>Selected Work & Case Examples</h2>
       <h2>Selected work</h2>
       <div class="work-list">
 
@@ -177,6 +181,35 @@
       </div>
     </section>
 
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <p>Roles demonstrating digital marketing execution, program coordination, and operational support across retail, nonprofit, and academic environments.</p>
+
+      <div class="work-list">
+        <div class="work-item">
+          <h3>Associate Category Program Manager — Digital Asset Management</h3>
+          <div class="work-meta">Whole Foods Market · Austin, TX</div>
+          <p>Support national retail programs through accurate, timely deployment of digital promotional assets and content.</p>
+          <ul>
+            <li>Maintain and deploy large-scale digital asset libraries using proprietary DAM tools</li>
+            <li>Coordinate product photography, sample logistics, and studio schedules</li>
+            <li>Partner cross-functionally with merchandising, marketing, and brand teams</li>
+            <li>Support in-store digital venue screens and quarterly content transitions</li>
+          </ul>
+        </div>
+
+        <div class="work-item">
+          <h3>Payment Risk Management Specialist</h3>
+          <div class="work-meta">H-E-B Grocery</div>
+          <ul>
+            <li>Analyzed and validated transactional data across 200+ locations</li>
+            <li>Produced weekly and monthly performance reports for leadership</li>
+            <li>Improved fraud prevention workflows through cross-team collaboration</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section id="resume">
       <h2>Resume</h2>
       <iframe 
@@ -188,6 +221,67 @@
       <p style="margin-top:16px">
         <a href="Josephine_s_Resume.pdf" target="_blank"><strong>Download resume (PDF)</strong></a>
       </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills & Tools</h2>
+      <p><strong>Digital & Technical</strong></p>
+      <p>Digital Asset Management · Excel (Advanced) · Project Management Tools · Salesforce · Slack · Social Media Strategy · Photography Coordination · Adobe Creative Suite · Basic HTML/CSS</p>
+
+      <p><strong>Languages & Certifications</strong></p>
+      <p>English (Fluent) · German (Advanced) · Spanish (Intermediate)<br>
+      Google Ads Certified · Ethics & Integrity in Ministry · Responsive Classroom</p>
+    </section>
+
+    <section id="leadership">
+      <h2>Leadership & Community Involvement</h2>
+      <div class="work-list">
+        <div class="work-item">
+          <h3>Vice Chair — Media & Communications</h3>
+          <div class="work-meta">St. Elias Antiochian Orthodox Church</div>
+          <ul>
+            <li>Lead communications strategy for fundraising campaigns and events</li>
+            <li>Coordinate messaging across design, finance, and leadership teams</li>
+            <li>Strengthen parish engagement through cohesive digital outreach</li>
+          </ul>
+        </div>
+
+        <div class="work-item">
+          <h3>President & Social Media Director</h3>
+          <div class="work-meta">Collegiate Entrepreneurs’ Organization (UIW)</div>
+          <ul>
+            <li>Increased social media engagement by 35% and membership by 20%</li>
+            <li>Planned workshops and networking events with industry partners</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests" style="margin-bottom:64px">
+      <h2 style="font-size:22px;font-weight:500">Personal Interests</h2>
+      <p style="max-width:720px;color:var(--muted);font-size:14px">A few personal interests that influence how I think about communication, systems, and collaboration.</p>
+      
+      <div class="work-list" style="gap:28px;margin-top:24px">
+        <div class="work-item" style="border-bottom:none;padding:0">
+          <h3 style="font-size:15px;font-weight:500;color:var(--sage-dark)">Community & Service</h3>
+          <p style="font-size:14px">Involvement in faith-based and community organizations with a focus on stewardship, communication, and long-term sustainability.</p>
+        </div>
+
+        <div class="work-item" style="border-bottom:none;padding:0">
+          <h3 style="font-size:15px;font-weight:500;color:var(--sage-dark)">Food, Retail, & Experiential Spaces</h3>
+          <p style="font-size:14px">Ongoing interest in grocery, food systems, and retail environments—particularly how physical and digital touchpoints shape the customer experience.</p>
+        </div>
+
+        <div class="work-item" style="border-bottom:none;padding:0">
+          <h3 style="font-size:15px;font-weight:500;color:var(--sage-dark)">Visual Organization & Systems</h3>
+          <p style="font-size:14px">Enjoy building clear systems for information, assets, and workflows that make creative work easier to execute at scale.</p>
+        </div>
+
+        <div class="work-item" style="border-bottom:none;padding:0">
+          <h3 style="font-size:15px;font-weight:500;color:var(--sage-dark)">Travel, Culture, & Language</h3>
+          <p style="font-size:14px">Interest in cultural exchange and language learning, including German and Spanish, and how culture shapes communication styles.</p>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
@@ -202,5 +296,27 @@
     </footer>
 
   </div>
+<script>
+  // Scroll-based nav highlight (subtle, no animation)
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('nav a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.style.fontWeight = '400';
+      if (link.getAttribute('href') === `#${current}`) {
+        link.style.fontWeight = '600';
+      }
+    });
+  });
+</script>
 </body>
 </html>
